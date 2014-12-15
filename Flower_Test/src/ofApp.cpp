@@ -2,14 +2,14 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-    ofBackground(0);
+    ofBackground(255);
     
     ofEnableAlphaBlending();
     ofSetVerticalSync(true);
     ofSetFrameRate(60);
 //    ofEnableDepthTest();
     myCam.setDistance(1000);
-    for (int i=0; i<100; i++) {
+    for (int i=0; i<200; i++) {
         Petal p;
         p.setup();
         pList.push_back(p);

@@ -11,7 +11,9 @@ Petal::Petal(){
 }
 
 void Petal::setup(){
-    petalSize=ofRandom(20,50);
+    rot.set( 0, 0, 0 );
+    rotInc.set( ofRandom(-rotMult, rotMult), ofRandom(-rotMult, rotMult), ofRandom(-rotMult, rotMult) );
+    petalSize=ofRandom(20,55);
     damping=0.98;
     setPicture=int(ofRandom(3));
     float phi = ofRandom( 0, TWO_PI );
@@ -40,6 +42,7 @@ void Petal::setup(){
 
 void Petal::update(){
     vel += acc;
+    rot += rotInc;
     
     // don't move too fast
     vel.limit(3.0);
@@ -58,8 +61,16 @@ void Petal::update(){
 }
 
 void Petal::draw(){
+    ofPushMatrix();{
+        ofTranslate(pos.x,pos.y,pos.z);
+        ofRotateX (rot.x);
+        ofRotateY (rot.y);
+        ofRotateZ (rot.z);
     for (int i=0; i<petalList.size(); i++) {
-       petalList[setPicture].draw(pos.x,pos.y,pos.z, petalSize, petalSize);
+       petalList[setPicture].draw(0,0,0, petalSize, petalSize);
+        }
     }
+    ofPopMatrix();
+    
 
 }

@@ -9,6 +9,12 @@ class Petal{
     void draw();
     
     ofVec3f pos, vel, acc;
+    
+    //rotation
+    ofVec3f rot;
+    ofVec3f rotInc;
+    float rotMult = 4;
+    
     float petalSize;
     float damping;
     vector<ofImage> petalList;

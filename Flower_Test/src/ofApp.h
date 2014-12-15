@@ -21,6 +21,7 @@ class ofApp : public ofBaseApp{
 		void gotMessage(ofMessage msg);
     vector<Petal>pList;
     ofEasyCam   myCam;
+    
 
 		
 };

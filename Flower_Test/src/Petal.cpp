@@ -15,7 +15,7 @@ void Petal::setup(){
     rotInc.set( ofRandom(-rotMult, rotMult), ofRandom(-rotMult, rotMult), ofRandom(-rotMult, rotMult) );
     petalSize=ofRandom(20,55);
     damping=0.98;
-    setPicture=int(ofRandom(3));
+    setPicture=int(ofRandom(4));
     float phi = ofRandom( 0, TWO_PI );
     float costheta = ofRandom( -1.0f, 1.0f );
     
@@ -29,7 +29,7 @@ void Petal::setup(){
     pos = randVec * ofRandom( 100.0f, 600.0f );
     vel = -randVec;
 
-    for (int i=0; i<3; i++) {
+    for (int i=0; i<4; i++) {
         string result = "";
         stringstream currentCombo;
         currentCombo << i;

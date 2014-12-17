@@ -25,7 +25,6 @@ class ofApp : public ofxiOSApp {
         void deviceOrientationChanged(int newOrientation);
     vector<Petal>pList;
     ofEasyCam   myCam;
-//    ofAppiOSWindow window;
 
 };
 

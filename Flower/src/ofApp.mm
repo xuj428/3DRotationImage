@@ -3,10 +3,7 @@
 //--------------------------------------------------------------
 void ofApp::setup(){	
     ofBackground(255);
-    //ofAppiOSWindow
-//    window.setFullscreen(true);
-//    window.enableRetina();
-//    window.disableOrientationAnimation();
+    
     ofEnableAlphaBlending();
     ofSetVerticalSync(true);
     ofSetFrameRate(60);
